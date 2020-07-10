@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test v2.7.5</title>
+</head>
+<body>
+  <h1>Text</h1>
+  <div id='output'></div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_SVG"></script>
+  <script>
+    MathJax.Hub.Config({
+      jax: ['input/TeX', 'input/MathML', 'input/AsciiMath', 'output/SVG'],
+      // hide the menu
+      showMathMenu: false,
+      // activate accessibility
+      menuSettings: {
+        explorer: true,
+      }
+    })
+    const ele = document.getElementById('output')
+    ele.innerHTML = "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow></mfrac></math>"
+    MathJax.Hub.Queue(['Typeset', Hub, ele])
+  </script>
+</body>
+</html>
